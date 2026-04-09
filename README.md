@@ -12,6 +12,7 @@ Guess 4: 43 → Too high
 Guess 5: 40 → Too low
 Guess 6: 41 → Too low
 Guess 7: 42 → Correct!
+
 Total Guesses: 7
 
 Example 2: Guessing in a Range from 1 to 50
@@ -23,14 +24,19 @@ Guess 3: 43 → Too high
 Guess 4: 40 → Too low
 Guess 5: 41 → Too low
 Guess 6: 42 → Correct!
+
 Total Guesses: 6
 
 Note: In both examples, the user intelligently uses the binary search strategy, halving the guessing range with each attempt.
 
-Algorithm
+Algorithm:
+
 Accept lower and upper bounds from the user.
+
 Generate a random number in the selected range.
+
 Calculate the maximum allowed guesses using the binary search formula.
+
 Run a loop to take user guesses:
 If the guess is too high, print: "Try Again! You guessed too high."
 If the guess is too low, print: "Try Again! You guessed too small."
