@@ -1,44 +1,29 @@
 import random
-import math
 
-# Taking Inputs
-lower = int(input("Enter Lower bound: "))
-upper = int(input("Enter Upper bound: "))
+print("Hi! Welcome to the Number Guessing Game.\nYou have 7 chances to guess the number. Let's start!")
 
-# Generating random number between the lower and upper
-x = random.randint(lower, upper)
+low = int(input("Enter the Lower Bound: "))
+high = int(input("Enter the Upper Bound: "))
 
-# Calculation of minimum number of guesses depends upon range
-total_chances = math.ceil(math.log2(upper - lower + 1))
+print(f"\nYou have 7 chances to guess the number between {low} and {high}. Let's start!")
 
-print(f"\n\tYou've only {total_chances} chances to guess the integer!\n")
+num = random.randint(low, high) 
+ch = 7                        # Total allowed chances
+gc = 0                        # Guess counter
 
-count = 0
-flag = False
+while gc < ch:
+    gc += 1
+    guess = int(input('Enter your guess: '))
 
-# While loop for guessing
-while count < total_chances:
-    count += 1
-
-    # Taking guessing number as input
-    try:
-        guess = int(input("Guess a number: "))
-    except ValueError:
-        print("Please enter a valid integer.")
-        count -= 1 # Don't penalize for a non-integer input
-        continue
-
-    # Condition testing
-    if x == guess:
-        print(f"Congratulations you did it in {count} try!")
-        flag = True
+    if guess == num:
+        print(f'Correct! The number is {num}. You guessed it in {gc} attempts.')
         break
-    elif x > guess:
-        print("You guessed too small!")
-    elif x < guess:
-        print("You guessed too high!")
 
-# If Guessing is more than required guesses
-if not flag:
-    print(f"\nThe number is {x}")
-    print("\tBetter Luck Next time!")
+    elif gc >= ch and guess != num:
+        print(f'Sorry! The number was {num}. Better luck next time.')
+
+    elif guess > num:
+        print('Too high! Try a lower number.')
+
+    elif guess < num:
+        print('Too low! Try a higher number.')
