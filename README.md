@@ -1,5 +1,5 @@
 # PYTHON PROJECTS
-# How the Number guessing Game Works
+## How the Number guessing Game Works
 To understand how the number guessing game functions, let’s walk through two practical scenarios. These examples demonstrate how narrowing down the range intelligently—similar to a binary search—can help guess the number efficiently.
 
 Example 1: Guessing in a Range from 1 to 100
@@ -60,7 +60,7 @@ If the guess is correct, print: "Congratulations!" and exit the loop.
 
 If the user runs out of chances, display the correct number and a message: "Better Luck Next Time!"
 
-# Payment Recipt
+## Payment Recipt
 Creating payment receipts is a pretty common task, be it an e-commerce website or any local store for that matter.
 
 Here, we will see how to create our own transaction receipts just by using python. We would be using reportlab to generate the PDFs. Generally, it comes as a built-in package but sometimes it might not be present too. If it's not present, then simply type the following in your terminal
