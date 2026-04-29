@@ -78,3 +78,20 @@ We need the data in the form of a list of lists. The 0th index of the outer inde
 We create a simple doc template with the specified paper size (here A4)
 Then get a sample style sheet from the built-in style sheets and add the styling accordingly.
 After you have created a style object, feed in the data and the style sheet to the pdf object and build it.
+
+## Personal Voice assitant
+As we know Python is a suitable language for script writers and developers. so i write a script for Personal Voice Assistant using Python. The query for the assistant can be manipulated as per the user's need. The implemented assistant can open up the application (if it's installed in the system), search Google, Wikipedia and YouTube about the query, calculate any mathematical question, etc by just giving the voice command. We can process the data as per the need or can add the functionality, depends upon how we code things. We are using Google speech recognition API and google text to speech for voice input and output respectively. Also, for calculating mathematical expression WolframAlpha API can be used. Playsound Package is used to play the saved mp3 sound from the system. 
+
+Python external Package Requirements:
+
+-> gTTS - Google Text To Speech, for converting the given text to speech -> speech_recognition - for recognizing the voice command and converting to text -> selenium - for web based work from browser -> wolframalpha - for calculation given by user -> playsound - for playing the saved audio file. -> playaudio - for voice engine in python
+
+Here are some of the examples and output, which can help you understand how the above processing works.
+
+1. Say "Search google Geeks for Geeks"
+2. Say "Play Youtube your favourite song"
+3. Say "Wikipedia Dhoni"
+4. Say "Open Microsoft Word"
+5. Say "Calculate anything you want"
+
+In all the above cases, it will give do what is told. If the assistant can't understand what is told it will ask you to google search it.
